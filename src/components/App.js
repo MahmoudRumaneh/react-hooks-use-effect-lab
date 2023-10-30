@@ -19,6 +19,14 @@ function App() {
     }
   }
 
+  let message = "";
+  if (score < 3) {
+    message = "Game Over";
+  } else if (score >= 3 && score < 6) {
+    message = "Good";
+  } else {
+    message = "Great Job";
+  }
   return (
     <main>
       <section>
@@ -29,7 +37,7 @@ function App() {
           />
         ) : (
           <>
-            <h1>Game Over</h1>
+            <h1>{message}</h1>
             <h2>Total Correct: {score}</h2>
           </>
         )}
